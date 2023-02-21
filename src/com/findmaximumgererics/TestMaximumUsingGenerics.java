@@ -25,6 +25,6 @@ public class TestMaximumUsingGenerics<T extends Comparable<T>> {
 
     public static void main(String[] args) {
         new TestMaximumUsingGenerics<>(30,200,12);
-
+        new TestMaximumUsingGenerics<>(20.5,40.1,5.2);
     }
 }
