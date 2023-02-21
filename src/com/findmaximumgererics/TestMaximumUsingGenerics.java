@@ -1,21 +1,21 @@
 package com.findmaximumgererics;
 
 public class TestMaximumUsingGenerics<T extends Comparable<T>> {
-    private T X ,Y, Z;
+    private T X, Y, Z;
 
-    public TestMaximumUsingGenerics(T x,T y,T z) {
-       this.X = x;
-       this.Y = y;
-       this.Z = z;
-       findMaximum(x, y, z);
+    public TestMaximumUsingGenerics(T x, T y, T z) {
+        this.X = x;
+        this.Y = y;
+        this.Z = z;
+        findMaximum(x, y, z);
     }
 
-    private static  <T extends Comparable<T>> T findMaximum(T x, T y, T z) {
+    private static <T extends Comparable<T>> T findMaximum(T x, T y, T z) {
         T max = x;
-        if (y.compareTo(max) > 0){
+        if (y.compareTo(max) > 0) {
             max = y;
         }
-        if (z.compareTo(max) > 0){
+        if (z.compareTo(max) > 0) {
             max = z;
         }
         System.out.println("Maximum of: " + x + ", " + y + ", " + z + " is: " + max);
@@ -24,7 +24,12 @@ public class TestMaximumUsingGenerics<T extends Comparable<T>> {
 
 
     public static void main(String[] args) {
-        new TestMaximumUsingGenerics<>(30,200,12);
-        new TestMaximumUsingGenerics<>(20.5,40.1,5.2);
+        // for integer
+        //  new TestMaximumUsingGenerics<>(30,200,12);
+        // for double
+        //  new TestMaximumUsingGenerics<>(20.5,40.1,5.2);
+        // for string
+        new TestMaximumUsingGenerics<>("kundan", "rahul", "shubham");
+        new TestMaximumUsingGenerics<>('z','q','t');
     }
 }
